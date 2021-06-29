@@ -2,7 +2,7 @@
 <body>
 <!---->
   <!--navbar-->
-  <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
               <!--navbar-expand-md says anything under medium size then the navbar collapses. We set up navbar-collapse later
                bg-dark is background dark-->
     <div class="container"><!--we add a container here to make it not against the edge. To contain it in the container-->
@@ -64,20 +64,22 @@ screens and it'll auto revert to center align.
             This is a showcase of me and my portfolio. It has been developed to be mobile friendly too.
           </p>
 <!--          we use the class lead to make it a bit bigger and set margin on y-axis to 3-->
-          <button class="btn btn-primary btn-lg">Resume</button>
+          <button class="btn btn-primary btn-lg">Learn more!</button>
         </div>
         <!--w-50 makes it 50% of the width(also size) then d-none d-sm-block make the image dissapear on smaller screens
         and img-fluid makes it scale with the parent element-->
-        <img class="img-fluid w-50 d-none d-sm-block" src="../assets/done.svg" alt="" />
+        <img class="img-fluid w-50 d-none d-sm-block" src="./assets/done.svg" alt="" />
       </div>
     </div>
   </section>
 
 <!--input form-->
   <section class="bg-primary text-light p-5">
-    <div class="container">
-      <div class="d-md-flex justify-content-between align-items-center">
-        <h3 class="mb-3 mb-md-0 text-center">Have any questions?</h3>
+    <div class="container"> <!--this is just always needed -->
+      <div class="d-md-flex justify-content-between align-items-center"> <!--we can use either flexbox or grid we use justify content between to leave space between them-->
+        <h3 class="mb-3 mb-md-0 text-center">Have any questions?</h3> <!--we give a margin of 3 but then 0 for smaller screens-->
+
+
         <div class="input-group email-input">
           <input type="text"
                  class="form-control"
@@ -88,37 +90,42 @@ screens and it'll auto revert to center align.
             id="button-addon2">Send
           </button>
         </div>
+
+
       </div>
     </div>
   </section>
 
 <!--  the boxes-->
-<!--this uses a grid to use grid we just need to use a class of row. That surrounds our columns with col class. We want 3 even columns
+<!--this uses a GRID to use grid we just need to use a class of row. That surrounds our columns with col class. We want 3 even columns
 but we do col-md to take away column on medium screens and it turns into rows-->
   <section class="p-5">
     <div class="container">
-      <div class="row text-center g-3">
-        <div class="col-md">
+      <div class="row text-center g-3"> <!--to use grid we need to set up a row class and then call col for columns-->
+
+        <!--column 1-->
+        <div class="col-md"> <!--but we dont want columns on big screens-->
           <div class="card bg-dark text-light">
             <div class="card-body text-center">
-              <div class="h1 mb-3">
-                <i class="bi bi-house-door"></i> <!--we  want it bigger so we wrap in a div and give it a class of h1 and give a margin bottom-->
+              <div class="h1 mb-3"> <!--we  want the logo bigger so we wrap in a div and give it a class of h1 and give a margin bottom-->
+                <i class="bi bi-house-door"></i> <!--use i for icon and we add an icon of bi to mean bootstrap icon and then the name is house-door so bi-house-door-->
               </div>
               <h3 class="mb-3 card-title">Homes</h3>
               <p class="card-text">How we can help you build your home</p>
               <a href="#home" class="btn btn-light">Read more!</a>
-<!--              so we end up h aving classes card, card-body, card-title, card-text and we add i tag for icon and a tag for a link-->
+<!--              so we end up having classes card, card-body, card-title, card-text and we add i tag for icon and a tag for a link-->
             </div>
           </div>
         </div>
-Q
+
+        <!--column 2-->
         <div class="col-md">
           <div class="card bg-secondary text-light">
             <div class="card-body text-center">
               <div class="h1 mb-3"><i class="bi bi-lightning-charge"></i></div>
               <h3 class="mb-3 card-title">Commercial </h3>
               <p class="card-text">We work on commercial projects too</p>
-              <a href="#" class="btn btn-light">Read more! </a>
+              <a href="#commercial" class="btn btn-light">Read more! </a>
             </div>
           </div>
         </div>
@@ -140,25 +147,97 @@ Q
   </section>
 
 
-  <!--learn sections-->
+  <!--more info sections-->
   <section id="home" class="p-5">
     <div class="container">
+
       <div class="row align-items-center justify-content-between">
         <div class="col-md">
-          <img src="./assets/undraw.svg" alt="" class="img-fluid w-50 d-none d-sm-block">
+          <img src="./assets/undraw.svg" alt="" class="img-fluid w-75 rounded mx-auto d-block d-none d-sm-block">
         </div>
         <div class="col-md p-5">
           <h2>Learn more</h2>
           <p class="lead">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur expedita explicabo harum numquam porro voluptas!
           </p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam, delectus deleniti dolores enim eum eveniet explicabo facilis ipsa iure laboriosam minima nobis quasi quia quibusdam recusandae sapiente unde velit?</p>
-
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam, delectus deleniti dolores enim eum eveniet explicabo facilis ipsa iure laboriosam minima nobis quasi quia quibusdam recusandae sapiente unde velit?
+          </p>
+          <a href="#" class="btn btn-light mt-3">
+            <i class="bi bi-chevron-right"></i>Read more!
+          </a>
         </div>
       </div>
     </div>
   </section>
 
+
+<!--more info section 2 commercial-->
+<section id="commercial" class="p-5 text-light bg-dark">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md p-5">
+        <h2>Learn more</h2>
+        <p class="lead">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur expedita explicabo harum numquam porro voluptas!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam, delectus deleniti dolores enim eum eveniet explicabo facilis ipsa iure laboriosam minima nobis quasi quia quibusdam recusandae sapiente unde velit?
+        </p>
+        <a href="#" class="btn btn-light mt-3">
+          <i class="bi bi-chevron-right"></i>Read more!
+        </a>
+      </div>
+
+      <div class="col-md">
+        <img src="./assets/undraw.svg" alt="" class="img-fluid w-75 rounded mx-auto d-block d-none d-sm-block ">
+<!--        we add rounded mx-auto d-block to make the image centered-->
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="p-5" id="questions">
+  <div class="container">
+    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Accordion Item #1
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+            Accordion Item #2
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+            Accordion Item #3
+          </button>
+        </h2>
+        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
 
 </body>
 

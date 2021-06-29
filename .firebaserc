@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "bootstrapelectric"
+  },
+  "targets": {
+    "bootstrapelectric": {
+      "hosting": {
+        "Website-Redesign": [
+          "bootstrapelectric"
+        ]
+      }
+    }
+  }
+}

@@ -1,4 +1,13 @@
 /*@import '~bootstrap/dist/css/bootstrap.css';*/
+
+/*add some space before the body to make the navbar fit*/
+body::before{
+  display: block;
+  content: '';
+  height: 50px;
+}
+
+
 @media (min-width: 768px) {
   .email-input{
     width: 50%;
