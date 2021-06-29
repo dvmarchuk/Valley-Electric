@@ -6,7 +6,7 @@
               <!--navbar-expand-md says anything under medium size then the navbar collapses. We set up navbar-collapse later
                bg-dark is background dark-->
     <div class="container"><!--we add a container here to make it not against the edge. To contain it in the container-->
-      <a href="#" class="navbar-brand">Portfolio</a><!--brand makes text a little bigger better for a title-->
+      <a href="#" class="navbar-brand">Valley Electric <a class="text-warning" href="tel:+15404212995">(540)421-2995</a></a><!--brand makes text a little bigger better for a title-->
 
       <!--this is the button that toggles the hamburger menu-->
       <button
@@ -23,18 +23,18 @@
           <ul class="navbar-nav ms-auto"><!--navbar-nav is bc it is navbar navigation ms-auto aligns it to the right-->
             <li class="nav-item"> <!--every li needs this class-->
               <div class="nav-link"><!---->
-                <a href="#" class="nav-link"><!--every link needs nav-link-->
-                  About me
+                <a data-bs-toggle="modal" data-bs-target="#aboutUs" class="nav-link"><!--every link needs nav-link-->
+                  About us
                 </a>
               </div>
             </li>
-            <li class="nav-item">
-              <div class="nav-link">
-                <a href="#" class="nav-link"><!--TODO-->
-                  Best work
-                </a>
-              </div>
-            </li>
+<!--            <li class="nav-item">-->
+<!--              <div class="nav-link">-->
+<!--                <a href="#" class="nav-link">&lt;!&ndash;TODO&ndash;&gt;-->
+<!--                  Best work-->
+<!--                </a>-->
+<!--              </div>-->
+<!--            </li>-->
           </ul>
         </div>
     </div>
@@ -49,7 +49,7 @@ p-5 is padding about it. we can also do pt which is padding at the top or pb, px
 With text-sm-start we dont want the text to be aligned left on smaller screens so we say to kick off alignment on smaller
 screens and it'll auto revert to center align.
 -->
-  <section class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start">
+  <section class="bg-dark text-light p-5 pt-lg-5 text-center text-sm-start">
     <div class="container"> <!--we put it into a container so it's not against the edge-->
 
       <!--here we want to make the flex boxes side by side so to use flexbox we need d-flex. We add the sm so that it wont
@@ -58,43 +58,22 @@ screens and it'll auto revert to center align.
       <div class="d-sm-flex align-items-center justify-content-between">
       <!-- here we will set up a flexbox row with two div items-->
         <div>
-          <h1>Welcome <span class="text-warning">to Marchuk</span></h1>
+          <h1>Valley Electric <span class="text-warning">and Solar</span></h1>
           <!-- we use span to change the text color and make it look nice-->
           <p class="lead my-3">
-            This is a showcase of me and my portfolio. It has been developed to be mobile friendly too.
+            Electric company based in Harrisonburg, VA
           </p>
 <!--          we use the class lead to make it a bit bigger and set margin on y-axis to 3-->
-          <button class="btn btn-primary btn-lg">Learn more!</button>
+          <a class="btn btn-primary btn-lg" href="#contact">Contact us</a>
         </div>
+
         <!--w-50 makes it 50% of the width(also size) then d-none d-sm-block make the image dissapear on smaller screens
         and img-fluid makes it scale with the parent element-->
-        <img class="img-fluid w-50 d-none d-sm-block" src="./assets/done.svg" alt="" />
+<!--        <img class="img-fluid w-50 d-none d-sm-block" src="./assets/done.svg" alt="" />-->
       </div>
     </div>
   </section>
 
-<!--input form-->
-  <section class="bg-primary text-light p-5">
-    <div class="container"> <!--this is just always needed -->
-      <div class="d-md-flex justify-content-between align-items-center"> <!--we can use either flexbox or grid we use justify content between to leave space between them-->
-        <h3 class="mb-3 mb-md-0 text-center">Have any questions?</h3> <!--we give a margin of 3 but then 0 for smaller screens-->
-
-
-        <div class="input-group email-input">
-          <input type="text"
-                 class="form-control"
-                 placeholder="Your email">
-          <button
-            class="btn btn-dark btn-lg"
-            type="button"
-            id="button-addon2">Send
-          </button>
-        </div>
-
-
-      </div>
-    </div>
-  </section>
 
 <!--  the boxes-->
 <!--this uses a GRID to use grid we just need to use a class of row. That surrounds our columns with col class. We want 3 even columns
@@ -103,24 +82,24 @@ but we do col-md to take away column on medium screens and it turns into rows-->
     <div class="container">
       <div class="row text-center g-3"> <!--to use grid we need to set up a row class and then call col for columns-->
 
+
         <!--column 1-->
-        <div class="col-md"> <!--but we dont want columns on big screens-->
-          <div class="card bg-dark text-light">
+        <div class="col-md">
+          <div class="card bg-warning text-light">
             <div class="card-body text-center">
-              <div class="h1 mb-3"> <!--we  want the logo bigger so we wrap in a div and give it a class of h1 and give a margin bottom-->
-                <i class="bi bi-house-door"></i> <!--use i for icon and we add an icon of bi to mean bootstrap icon and then the name is house-door so bi-house-door-->
-              </div>
-              <h3 class="mb-3 card-title">Homes</h3>
-              <p class="card-text">How we can help you build your home</p>
-              <a href="#home" class="btn btn-light">Read more!</a>
-<!--              so we end up having classes card, card-body, card-title, card-text and we add i tag for icon and a tag for a link-->
+              <div class="h1 mb-3"><i class="bi bi-lightbulb-off"></i></div>
+              <h3 class="mb-3 card-title">Service calls</h3>
+              <p class="card-text">We get you powered up quickly</p>
+              <a href="#service" class="btn btn-light">Contact us!</a>
             </div>
           </div>
         </div>
 
+
+
         <!--column 2-->
         <div class="col-md">
-          <div class="card bg-secondary text-light">
+          <div class="card bg-dark text-light">
             <div class="card-body text-center">
               <div class="h1 mb-3"><i class="bi bi-lightning-charge"></i></div>
               <h3 class="mb-3 card-title">Commercial </h3>
@@ -130,14 +109,31 @@ but we do col-md to take away column on medium screens and it turns into rows-->
           </div>
         </div>
 
+        <div class="col-md"> <!--but we dont want columns on big screens-->
+          <div class="card bg-secondary text-light">
+            <div class="card-body text-center">
+              <div class="h1 mb-3"> <!--we  want the logo bigger so we wrap in a div and give it a class of h1 and give a margin bottom-->
+                <i class="bi bi-house-door"></i> <!--use i for icon and we add an icon of bi to mean bootstrap icon and then the name is house-door so bi-house-door-->
+              </div>
+              <h3 class="mb-3 card-title">Homes</h3>
+              <p class="card-text">How we can help you build or renovate your home</p>
+              <a href="#home" class="btn btn-light">Read more!</a>
+              <!--              so we end up having classes card, card-body, card-title, card-text and we add i tag for icon and a tag for a link-->
+            </div>
+          </div>
+        </div>
 
-        <div class="col-md">
+
+        <div class="col-md"> <!--but we dont want columns on big screens-->
           <div class="card bg-dark text-light">
             <div class="card-body text-center">
-              <div class="h1 mb-3"><i class="bi bi-life-preserver"></i></div>
-              <h3 class="mb-3 card-title">Service calls</h3>
-              <p class="card-text">How we keep your home and business powered</p>
-              <a href="#" class="btn btn-light">Read more!</a>
+              <div class="h1 mb-3"> <!--we  want the logo bigger so we wrap in a div and give it a class of h1 and give a margin bottom-->
+                <i class="bi bi-sun"></i> <!--use i for icon and we add an icon of bi to mean bootstrap icon and then the name is house-door so bi-house-door-->
+              </div>
+              <h3 class="mb-3 card-title">Solar</h3>
+              <p class="card-text">How we can help you become energy independent</p>
+              <a href="#solar" class="btn btn-light">Read more!</a>
+              <!--              so we end up having classes card, card-body, card-title, card-text and we add i tag for icon and a tag for a link-->
             </div>
           </div>
         </div>
@@ -147,29 +143,35 @@ but we do col-md to take away column on medium screens and it turns into rows-->
   </section>
 
 
-  <!--more info sections-->
-  <section id="home" class="p-5">
-    <div class="container">
+  <!--more info section service-->
+<section id="service" class="p-5">
+  <div class="container">
 
-      <div class="row align-items-center justify-content-between">
-        <div class="col-md">
-          <img src="./assets/undraw.svg" alt="" class="img-fluid w-75 rounded mx-auto d-block d-none d-sm-block">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md">
+        <img src="./assets/breakerBox.jpeg" alt="" class="img-fluid w-80 rounded mx-auto d-block d-none d-sm-block">
+      </div>
+      <div class="col-md p-5">
+        <h2>Service Calls</h2>
+        <p class="lead">
+          Sometimes your power isn't powering. Call us at <a href="tel:+15404212995">(540)421-2995</a>
+        </p>
+        <p>
+          We do over 100 service calls every year.
+        </p>
+        <div class="text-center">
+          <a class="btn btn-primary btn-lg" href="tel:+15404212995" role="button">Call us</a>
+          <a class="btn btn-primary btn-lg m-5 btn-success" href="sms:+15404212995" role="button">Text us</a>
         </div>
-        <div class="col-md p-5">
-          <h2>Learn more</h2>
-          <p class="lead">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur expedita explicabo harum numquam porro voluptas!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam, delectus deleniti dolores enim eum eveniet explicabo facilis ipsa iure laboriosam minima nobis quasi quia quibusdam recusandae sapiente unde velit?
-          </p>
-          <a href="#" class="btn btn-light mt-3">
-            <i class="bi bi-chevron-right"></i>Read more!
-          </a>
-        </div>
+
+        <!--        <a href="#" class="btn btn-light mt-3">-->
+        <!--          <i class="bi bi-chevron-right"></i>Read more!-->
+        <!--        </a>-->
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
 
 <!--more info section 2 commercial-->
@@ -177,21 +179,72 @@ but we do col-md to take away column on medium screens and it turns into rows-->
   <div class="container">
     <div class="row align-items-center justify-content-between">
       <div class="col-md p-5">
-        <h2>Learn more</h2>
+        <h2>Commercial</h2>
         <p class="lead">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur expedita explicabo harum numquam porro voluptas!
+          Commercial license to work on commercial properties
         </p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aperiam, delectus deleniti dolores enim eum eveniet explicabo facilis ipsa iure laboriosam minima nobis quasi quia quibusdam recusandae sapiente unde velit?
+          With commercial work always in demand we take on large and small projects. We also do service calls for commercial properties.
         </p>
-        <a href="#" class="btn btn-light mt-3">
-          <i class="bi bi-chevron-right"></i>Read more!
-        </a>
+<!--        <a href="#" class="btn btn-light mt-3">-->
+<!--          <i class="bi bi-chevron-right"></i>Read more!-->
+<!--        </a>-->
       </div>
 
       <div class="col-md">
-        <img src="./assets/undraw.svg" alt="" class="img-fluid w-75 rounded mx-auto d-block d-none d-sm-block ">
+        <img src="./assets/church.jpg" alt="" class="img-fluid rounded mx-auto d-block d-none d-sm-block ">
 <!--        we add rounded mx-auto d-block to make the image centered-->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--more info section 3 home-->
+<section id="home" class="p-5">
+  <div class="container">
+
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md">
+        <img src="./assets/house.jpg" alt="" class="img-fluid rounded mx-auto d-block d-none d-sm-block">
+      </div>
+      <div class="col-md p-5">
+        <h2>Homes</h2>
+        <p class="lead">
+          We work on new and existing homes
+        </p>
+        <p>
+          With over 15 years in business we have done dozens of new homes from scratch and work with renovation companies to do existing homes too.
+        </p>
+        <!--          <a href="#" class="btn btn-light mt-3">-->
+        <!--            <i class="bi bi-chevron-right"></i>Read more!-->
+        <!--          </a>-->
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--more info section 4 solar-->
+<section id="solar" class="p-5 text-light bg-dark">
+  <div class="container">
+    <div class="row align-items-center justify-content-between">
+      <div class="col-md p-5">
+        <h2><span class="text-warning">Solar</span></h2>
+        <p class="lead">
+          Solar panel installation
+        </p>
+        <p>
+          With a drive to switch to renewable off-grid energy we install solar panels on businesses and residential homes
+        </p>
+<!--        <a href="#" class="btn btn-light mt-3">-->
+<!--          <i class="bi bi-chevron-right"></i>Read more!-->
+<!--        </a>-->
+      </div>
+
+      <div class="col-md">
+        <img src="./assets/solar.jpg" alt="" class="img-fluid rounded mx-auto d-block d-none d-sm-block ">
+        <!--        we add rounded mx-auto d-block to make the image centered-->
       </div>
     </div>
   </div>
@@ -200,44 +253,191 @@ but we do col-md to take away column on medium screens and it turns into rows-->
 <section class="p-5" id="questions">
   <div class="container">
     <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-
-
     <div class="accordion accordion-flush" id="accordionFlushExample">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-            Accordion Item #1
-          </button>
-        </h2>
-        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-        </div>
-      </div>
+
+
       <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingTwo">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-            Accordion Item #2
+            Something is wrong with my electricity what can I do?
           </button>
         </h2>
         <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+          <div class="accordion-body">We do over 100 service calls every year, just give us a call or text us at <a href="tel:+15404212995">(540)421-2995</a>. </div>
         </div>
       </div>
+
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+            Where are you located?
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">We are located in Harrisonburg, VA</div>
+        </div>
+      </div>
+
+
       <div class="accordion-item">
         <h2 class="accordion-header" id="flush-headingThree">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-            Accordion Item #3
+            How much experience do you have?
           </button>
         </h2>
         <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+          <div class="accordion-body">We have been in business for over 15 years.</div>
         </div>
       </div>
+
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseOne">
+            How much will my solar panels cost, how much power can it give me?
+          </button>
+        </h2>
+        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">We are happy to take a look and get the right setup for your location and needs.</div>
+        </div>
+      </div>
+
     </div>
-
-
   </div>
 </section>
+
+<!--    reviews-->
+    <section id="reviews" class="p-5 bg-primary">
+      <div class="container">
+        <h2 class="text-center text-white">
+          Testimonials
+        </h2>
+        <p class="lead text-center text-white mb-5">We have hundreds of satisfied clients here are just a few!</p>
+        <div class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4">
+<!--          col-md-6 col-lg-3-->
+          <div class="col"> <!--here the trick is on this row we want each card to take up 6 out of 12 sections on smaller than medium and 3/12 on large -->
+            <div class="card bg-light">
+              <div class="card-body text-center">
+<!--                <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="" class=" rounded-circle mb-3">-->
+                <h3 class="card-title mb-3">Denise Montgomery</h3>
+                <p class="card-text">In 27 years of being a homeowner, one of the most positive repair experiences I’ve ever had. David was thorough, personable, and totally knowledgeable about his work. My ceiling fan/light fixture wasn’t working at all, and he tested every wire, the neutral, the sockets, and the light switch to see if they were working, replaced some plastic pieces in the fan, and got everything running again. However, the fan was still making a slight clattering noise, so he detached it from the ceiling, removed a piece of paper from inside and felt around some more, then reattached it to the ceiling. The fan is now whirling almost silently above me, giving off the most delicious cool breeze. I will definitely be giving them all my electrical business from now on.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col"> <!--here the trick is on this row we want each card to take up 6 out of 12 sections on smaller than medium and 3/12 on large -->
+            <div class="card bg-light">
+              <div class="card-body text-center">
+<!--                <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="" class=" rounded-circle mb-3">-->
+                <h3 class="card-title mb-3">Jacqueline Mendez</h3>
+                <p class="card-text">I gave David a long list of tasks on our plate and he spent a total of 8 hours at our home completing projects. He took his time and made sure each project was completed to the highest standard. He was pleasant and easy to schedule whereas other electricians in the area I had left messages for still have yet to return my calls. David is meticulous with his skills and his work ethic is top notch! We will certainly only schedule with him in the future for our home electrical needs. He is a keeper. Thank you, David!</p>
+              </div>
+            </div>
+          </div>
+
+
+            <div class="col"> <!--here the trick is on this row we want each card to take up 6 out of 12 sections on smaller than medium and 3/12 on large -->
+              <div class="card bg-light">
+              <div class="card-body text-center">
+<!--                <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="" class=" rounded-circle mb-3">-->
+                <h3 class="card-title mb-3">Molly O'Donnell</h3>
+                <p class="card-text">Valley Electric is the best service provider we have dealt with in the area. David was prompt, worked quickly, responded consistently, and charged a very reasonable rate. We've spent weeks dealing with contractors, electricians, plumbers, etc. who fail to show up or call back or do the work in a timely manner, so Valley really stood out. If you have any need they offer, I highly suggest reaching out to them. You'll be really happy with their professionalism and speed.</p>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col"> <!--here the trick is on this row we want each card to take up 6 out of 12 sections on smaller than medium and 3/12 on large -->
+              <div class="card bg-light">
+              <div class="card-body text-center">
+<!--                <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="" class=" rounded-circle mb-3">-->
+                <h3 class="card-title mb-3">Daniil Parchuk</h3>
+                <p class="card-text">One of the best down to earth electricians, an honest guy you can always call</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
+
+<section id="contact">
+  <div class="container" >
+    <div class="row g-4">
+      <div class="col-md">
+        <h2 class="text-center m-4">Contact Info</h2>
+        <ul class="list-group list-group-flush lead">
+          <li class="list-group-item">
+            <span class="fw-bold">Located:</span> Harrisonburg, Virginia
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold">Call us: </span> <a href="tel:+15404212995">(540)421-2995</a>
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold">Text us: </span> <a href="sms:+15404212995">(540)421-2995</a>
+          </li>
+          <li class="list-group-item">
+            <span class="fw-bold">Email:</span> VAValleyElectric@gmail.com
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--input form-->
+<!--<section class="bg-primary text-light p-sm-5 p-3">-->
+<!--  <div class="container"> &lt;!&ndash;this is just always needed &ndash;&gt;-->
+<!--    <div class="d-md-flex justify-content-between align-items-center"> &lt;!&ndash;we can use either flexbox or grid we use justify content between to leave space between them&ndash;&gt;-->
+<!--      <h3 class="mb-3 mb-md-3 text-center">Have any questions?</h3> &lt;!&ndash;we give a margin of 3 but then 0 for smaller screens&ndash;&gt;-->
+
+
+<!--      <div class="input-group email-input">-->
+<!--        <input type="text"-->
+<!--               class="form-control"-->
+<!--               placeholder="Your email">-->
+<!--        <button-->
+<!--          class="btn btn-dark btn-lg"-->
+<!--          type="button"-->
+<!--          id="button-addon2">Send-->
+<!--        </button>-->
+<!--      </div>-->
+
+
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<footer class="p-1 bg-dark text-white text-center position-relative">
+  <div class="container">
+    <p class="lead">Valley Electric</p>
+    <a href="#" class="position-absolute bottom-0 end-0 p-1">
+      <i class="bi bi-arrow-up-circle h1"></i>
+    </a>
+  </div>
+</footer>
+
+ Modal
+<div class="modal fade" id="aboutUs" tabindex="-1" aria-labelledby="about">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="about">About us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        Hello I am Dave, and we are Valley Electric. We have been serving the valley for 15 years. I have had many projects over the years and personally oversee every one. I believe we can help you get the work you need done.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 </body>
 
